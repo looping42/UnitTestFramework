@@ -20,3 +20,15 @@
 13:26:00 - Info        Cycle Négatif : non
 13:31:41 - Info        Cycle Négatif : non
 13:32:12 - Info        Cycle Négatif : non
+13:53:24 - Info        hello
+13:53:24 - Info        Cycle Négatif : non
+14:10:38 - Info        Cycle Négatif : non
+14:13:58 - Info        hello
+14:13:58 - Info        Cycle Négatif : non
+16:40:41 - Info        hello
+16:40:41 - Info        Cycle Négatif : non
+19:17:15 - Info        Cycle Négatif : non
+19:17:30 - Info        Cycle Négatif : non
+19:18:21 - Info        Cycle Négatif : non
+20:46:55 - Info        hello
+20:46:55 - Info        Cycle Négatif : non

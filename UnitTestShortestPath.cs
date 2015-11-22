@@ -109,13 +109,46 @@ namespace TestProject
                     }
                 }
             }
-            Assert.AreEqual("0247047070-22470", result);
-            //foreach (Node node in newShortPath.nodes)
+            Assert.AreEqual("085098505070", result);
+        }
+
+        [TestMethod]
+        public void UnitFloydWarshall()
+        {
+            FloydWarshall newFloyd = new FloydWarshall();
+            newFloyd.MaxValue = 9999;
+            newFloyd.TwoDimensionArray = new int[5, 5] { { 0, 3, 8, 9999, -4 },
+                                            { 9999, 0, 9999, 1, 7 },
+                                            { 9999, 4, 0, 9999, 9999 },
+                                            { 2, 9999, -5, 0, 9999 },
+                                            { 9999, 9999,9999, 6, 0 } };
+            //newFloyd.dist = new int[5, 5] { { 0, int.MaxValue, int.MaxValue, 2, int.MaxValue }, { 3, 0, 4, int.MaxValue, int.MaxValue }, { 8, int.MaxValue, 0, -5, int.MaxValue }, { int.MaxValue, 1, int.MaxValue, 0, 6 }, { -4, 7, int.MaxValue, int.MaxValue, 0 } };
+            //newFloyd.dist = new int[5, 5] { { 0, int.MaxValue, 3, int.MaxValue, 1 },
+            //                                { 5, 0, int.MaxValue, int.MaxValue, 3 },
+            //                                { int.MaxValue, 2, 0, 4, int.MaxValue },
+            //                                { 2, int.MaxValue, int.MaxValue, 0, 0 },
+            //                                { int.MaxValue, int.MaxValue, 7, 1, 0 } };
+            //newFloyd.dist = new int[5, 5] { { 0, 5, int.MaxValue, 2, int.MaxValue },
+            //                                { int.MaxValue, 0, 2, int.MaxValue, int.MaxValue },
+            //                                { 3, int.MaxValue, 0, int.MaxValue, 7 },
+            //                                { int.MaxValue, int.MaxValue, 4, 0, 1 },
+            //                                { 1, 3, int.MaxValue, int.MaxValue, 0 } };
+
+            //newFloyd.dist = new int[4, 4] { {0,   5,  9999, 10},
+            //                                {9999,  0,  3,  9999},
+            //                                {9999, 9999, 0,   1},
+            //                                {9999, 9999, 9999, 0} };
+            newFloyd.NumberOfNodes = 5;
+            newFloyd.floyd_warshall();
+
+            //for (int i = 0; i < result.GetLength(0); i++)
             //{
-            //    Console.WriteLine("Node value : " + node.Value);
-            //    Console.WriteLine("Node parent : " + node.parent);
+            //    for (int j = 0; j < result.GetLength(1); j++)
+            //    {
+            //        Console.Write(result[i, j]);
+            //    }
+            //    Console.WriteLine();
             //}
-            Console.ReadLine();
         }
     }
 }
