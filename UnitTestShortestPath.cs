@@ -37,14 +37,27 @@ namespace TestProject
             newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[4], Weight = 9 });
             newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[2], Weight = -3 });
 
-            newShortPath.bellmanFord();
+            newShortPath.BellmanFordWork();
 
-            foreach (Node node in newShortPath.nodes)
+            string result = "";
+            for (int i = 0; i < newShortPath.nodes.Count; i++)
             {
-                Console.WriteLine("Node value : " + node.Value);
-                Console.WriteLine("Node parent : " + node.parent);
+                result += newShortPath.nodes[i].Value;
+                bool ok = true;
+                while (ok)
+                {
+                    if (newShortPath.nodes[i].parent != null)
+                    {
+                        result += newShortPath.nodes[i].parent.Value;
+                        newShortPath.nodes[i] = newShortPath.nodes[i].parent;
+                    }
+                    else
+                    {
+                        ok = false;
+                    }
+                }
             }
-            Console.ReadLine();
+            Assert.AreEqual("0247047070-22470", result);
         }
 
         [TestMethod]
@@ -78,11 +91,30 @@ namespace TestProject
 
             newShortPath.DijkstraWork();
 
-            foreach (Node node in newShortPath.nodes)
+            string result = "";
+            for (int i = 0; i < newShortPath.nodes.Count; i++)
             {
-                Console.WriteLine("Node value : " + node.Value);
-                Console.WriteLine("Node parent : " + node.parent);
+                result += newShortPath.nodes[i].Value;
+                bool ok = true;
+                while (ok)
+                {
+                    if (newShortPath.nodes[i].parent != null)
+                    {
+                        result += newShortPath.nodes[i].parent.Value;
+                        newShortPath.nodes[i] = newShortPath.nodes[i].parent;
+                    }
+                    else
+                    {
+                        ok = false;
+                    }
+                }
             }
+            Assert.AreEqual("0247047070-22470", result);
+            //foreach (Node node in newShortPath.nodes)
+            //{
+            //    Console.WriteLine("Node value : " + node.Value);
+            //    Console.WriteLine("Node parent : " + node.parent);
+            //}
             Console.ReadLine();
         }
     }
