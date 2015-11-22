@@ -1,0 +1,12 @@
+11:39:08 - Info        Cycle Négatif : non
+11:44:52 - Info        hello
+11:44:52 - Info        Cycle Négatif : non
+11:45:21 - Info        Cycle Négatif : non
+11:47:45 - Info        hello
+11:47:45 - Info        Cycle Négatif : non
+11:49:26 - Info        hello
+11:49:26 - Info        Cycle Négatif : non
+11:52:55 - Info        hello
+11:52:55 - Info        Cycle Négatif : non
+12:25:49 - Info        hello
+12:25:49 - Info        Cycle Négatif : non
