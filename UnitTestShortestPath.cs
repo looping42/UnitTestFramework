@@ -37,23 +37,25 @@ namespace TestProject
             newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[4], Weight = 9 });
             newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[2], Weight = -3 });
 
-            newShortPath.BellmanFordWork();
-
             string result = "";
-            for (int i = 0; i < newShortPath.nodes.Count; i++)
+            bool okNoCyleNeg = newShortPath.BellmanFordWork();
+            if (okNoCyleNeg)
             {
-                result += newShortPath.nodes[i].Value;
-                bool ok = true;
-                while (ok)
+                for (int i = 0; i < newShortPath.nodes.Count; i++)
                 {
-                    if (newShortPath.nodes[i].parent != null)
+                    result += newShortPath.nodes[i].Value;
+                    bool ok = true;
+                    while (ok)
                     {
-                        result += newShortPath.nodes[i].parent.Value;
-                        newShortPath.nodes[i] = newShortPath.nodes[i].parent;
-                    }
-                    else
-                    {
-                        ok = false;
+                        if (newShortPath.nodes[i].parent != null)
+                        {
+                            result += newShortPath.nodes[i].parent.Value;
+                            newShortPath.nodes[i] = newShortPath.nodes[i].parent;
+                        }
+                        else
+                        {
+                            ok = false;
+                        }
                     }
                 }
             }
@@ -139,16 +141,16 @@ namespace TestProject
             //                                {9999, 9999, 0,   1},
             //                                {9999, 9999, 9999, 0} };
             newFloyd.NumberOfNodes = 5;
-            newFloyd.floyd_warshall();
+            newFloyd.Floyd_warshallWork();
+            List<int> rez = new List<int>();
+            newFloyd.GetPath(2, 4, ref rez);
 
-            //for (int i = 0; i < result.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < result.GetLength(1); j++)
-            //    {
-            //        Console.Write(result[i, j]);
-            //    }
-            //    Console.WriteLine();
-            //}
+            string result = "";
+            foreach (var item in rez)
+            {
+                result += item;
+            }
+            Assert.AreEqual("21304", result);
         }
     }
 }
