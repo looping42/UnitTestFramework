@@ -12,45 +12,45 @@ namespace TestProject
         public void UnitBellmanFord()
         {
             BellmanFord newShortPath = new BellmanFord();
-            newShortPath.nodes = new List<Node>();
-            newShortPath.edges = new List<Edge>();
-            newShortPath.posNodeStart = 0;
+            newShortPath.Nodes = new List<Node>();
+            newShortPath.Edges = new List<Edge>();
+            newShortPath.PosNodeStart = 0;
             for (int i = 1; i < 6; i++)
             {
                 Node a = new Node();
                 a.Value = i;
-                newShortPath.nodes.Add(a);
+                newShortPath.Nodes.Add(a);
             }
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[0], B = newShortPath.nodes[1], Weight = 6 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[0], B = newShortPath.nodes[3], Weight = 7 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[1], Weight = 6 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[3], Weight = 7 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[1], B = newShortPath.nodes[2], Weight = 5 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[1], B = newShortPath.nodes[3], Weight = 8 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[1], B = newShortPath.nodes[4], Weight = -4 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[2], Weight = 5 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[3], Weight = 8 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[4], Weight = -4 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[2], B = newShortPath.nodes[1], Weight = -2 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[2], B = newShortPath.Nodes[1], Weight = -2 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[4], B = newShortPath.nodes[2], Weight = 7 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[4], B = newShortPath.nodes[0], Weight = 2 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[2], Weight = 7 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[0], Weight = 2 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[4], Weight = 9 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[2], Weight = -3 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[4], Weight = 9 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[2], Weight = -3 });
 
             string result = "";
             bool okNoCyleNeg = newShortPath.BellmanFordWork();
             if (okNoCyleNeg)
             {
-                for (int i = 0; i < newShortPath.nodes.Count; i++)
+                for (int i = 0; i < newShortPath.Nodes.Count; i++)
                 {
-                    result += newShortPath.nodes[i].Value;
+                    result += newShortPath.Nodes[i].Value;
                     bool ok = true;
                     while (ok)
                     {
-                        if (newShortPath.nodes[i].parent != null)
+                        if (newShortPath.Nodes[i].parent != null)
                         {
-                            result += newShortPath.nodes[i].parent.Value;
-                            newShortPath.nodes[i] = newShortPath.nodes[i].parent;
+                            result += newShortPath.Nodes[i].parent.Value;
+                            newShortPath.Nodes[i] = newShortPath.Nodes[i].parent;
                         }
                         else
                         {
@@ -66,44 +66,44 @@ namespace TestProject
         public void UnitDjiskra()
         {
             Dijkstra newShortPath = new Dijkstra();
-            newShortPath.nodes = new List<Node>();
-            newShortPath.edges = new List<Edge>();
-            newShortPath.posNodeStart = 0;
+            newShortPath.Nodes = new List<Node>();
+            newShortPath.Edges = new List<Edge>();
+            newShortPath.PosNodeStart = 0;
             for (int i = 1; i < 6; i++)
             {
                 Node a = new Node();
                 a.Value = i;
-                newShortPath.nodes.Add(a);
+                newShortPath.Nodes.Add(a);
             }
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[0], B = newShortPath.nodes[1], Weight = 10 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[0], B = newShortPath.nodes[3], Weight = 5 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[1], Weight = 10 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[3], Weight = 5 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[1], B = newShortPath.nodes[2], Weight = 1 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[1], B = newShortPath.nodes[3], Weight = 2 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[2], Weight = 1 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[3], Weight = 2 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[2], B = newShortPath.nodes[4], Weight = 4 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[2], B = newShortPath.Nodes[4], Weight = 4 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[1], Weight = 3 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[2], Weight = 9 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[3], B = newShortPath.nodes[4], Weight = 2 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[1], Weight = 3 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[2], Weight = 9 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[4], Weight = 2 });
 
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[4], B = newShortPath.nodes[2], Weight = 6 });
-            newShortPath.edges.Add(new Edge() { A = newShortPath.nodes[4], B = newShortPath.nodes[0], Weight = 7 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[2], Weight = 6 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[0], Weight = 7 });
 
             newShortPath.DijkstraWork();
 
             string result = "";
-            for (int i = 0; i < newShortPath.nodes.Count; i++)
+            for (int i = 0; i < newShortPath.Nodes.Count; i++)
             {
-                result += newShortPath.nodes[i].Value;
+                result += newShortPath.Nodes[i].Value;
                 bool ok = true;
                 while (ok)
                 {
-                    if (newShortPath.nodes[i].parent != null)
+                    if (newShortPath.Nodes[i].parent != null)
                     {
-                        result += newShortPath.nodes[i].parent.Value;
-                        newShortPath.nodes[i] = newShortPath.nodes[i].parent;
+                        result += newShortPath.Nodes[i].parent.Value;
+                        newShortPath.Nodes[i] = newShortPath.Nodes[i].parent;
                     }
                     else
                     {
