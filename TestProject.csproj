@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestBinaryTree.cs" />
     <Compile Include="UnitTestFlow.cs" />
     <Compile Include="UnitTestShortestPath.cs" />
   </ItemGroup>

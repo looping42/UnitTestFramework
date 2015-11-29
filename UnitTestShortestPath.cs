@@ -9,6 +9,63 @@ namespace TestProject
     public class UnitTestShortestPath
     {
         [TestMethod]
+        public void UnitGraphInMatrix()
+        {
+            BellmanFord newShortPath = new BellmanFord();
+            newShortPath.Nodes = new List<Node>();
+            newShortPath.Edges = new List<Edge>();
+            newShortPath.PosNodeStart = 0;
+            newShortPath.MaxValue = -1;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Node a = new Node();
+                a.Value = i;
+                newShortPath.Nodes.Add(a);
+            }
+
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[1], Weight = 6 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[0], B = newShortPath.Nodes[3], Weight = 7 });
+
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[2], Weight = 5 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[3], Weight = 8 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[1], B = newShortPath.Nodes[4], Weight = -4 });
+
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[2], B = newShortPath.Nodes[0], Weight = -2 });
+
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[2], Weight = 7 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[4], B = newShortPath.Nodes[0], Weight = 2 });
+
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[4], Weight = 9 });
+            newShortPath.Edges.Add(new Edge() { A = newShortPath.Nodes[3], B = newShortPath.Nodes[2], Weight = -3 });
+
+            Console.Error.WriteLine("Graph simple sens");
+            //graph simple sens
+            int[,] test = newShortPath.GraphInMatrix();
+
+            for (int i = 0; i < test.GetLongLength(0); i++)
+            {
+                for (int j = 0; j < test.GetLongLength(1); j++)
+                {
+                    Console.Error.Write(test[i, j]);
+                }
+                Console.Error.WriteLine();
+            }
+
+            Console.Error.WriteLine("Graph double sens");
+            //graphe double sens
+            int[,] test2 = newShortPath.GraphInMatrixDoubleSens();
+            for (int i = 0; i < test2.GetLongLength(0); i++)
+            {
+                for (int j = 0; j < test2.GetLongLength(1); j++)
+                {
+                    Console.Error.Write(test2[i, j]);
+                }
+                Console.Error.WriteLine();
+            }
+        }
+
+        [TestMethod]
         public void UnitBellmanFord()
         {
             BellmanFord newShortPath = new BellmanFord();

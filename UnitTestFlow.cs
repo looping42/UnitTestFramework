@@ -11,12 +11,12 @@ namespace TestProject
         public void UnitFordFulkerson()
         {
             // Let us create a graph shown in the above example
-            int[,] graph = new int[6, 6] { {0, 16, 13, 0, 0, 0},
-                                            {0, 0, 10, 12, 0, 0},
-                                            {0, 4, 0, 0, 14, 0},
-                                            {0, 0, 9, 0, 0, 20},
-                                            {0, 0, 0, 7, 0, 4},
-                                            {0, 0, 0, 0, 0, 0}
+            int[,] graph = new int[6, 6] { {-1, 16, 13, 0, 0, 0},
+                                            {0, -1, 10, 12, 0, 0},
+                                            {0, 4, -1, 0, 14, 0},
+                                            {0, 0, 9, -1, 0, 20},
+                                            {0, 0, 0, 7, -1, 4},
+                                            {0, 0, 0, 0, 0, -1}
                                    };
             FordFulkerson newFlot = new FordFulkerson();
             newFlot.TwoDimensionArray = graph;
