@@ -1,0 +1,9 @@
+10:58:36 - Info        hello
+18:43:22 - Info        
+ Number of columns in First Matrix should be equal to Number of rows in Second Matrix.
+18:43:22 - Info        
+ Please re-enter correct dimensions.
+20:56:09 - Info        hello
+22:10:27 - Info        hello
+22:11:56 - Info        hello
+22:12:21 - Info        hello

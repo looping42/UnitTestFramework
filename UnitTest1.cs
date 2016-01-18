@@ -11,7 +11,7 @@ namespace TestProject
         public void TestMethod1()
         {
             Logger.Info("hello");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

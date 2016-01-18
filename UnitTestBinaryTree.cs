@@ -35,6 +35,8 @@ namespace TestProject
             Console.Error.WriteLine("parcours postfixe c :");
             c.PostfixeTraversal();
 
+            Console.Error.WriteLine("number of nodes " + a.NumberOfNodes());
+
             a.InsertValueInTree(6);
             a.InsertValueInTree(11);
             a.InsertValueInTree(7);
@@ -73,6 +75,15 @@ namespace TestProject
             Tree temp4 = Tree.TreeSearchPredecessor(a.Left);
             Console.Error.WriteLine("L'arbre enfant est {0}", a.Left.Value);
             Console.Error.WriteLine("L'arbre parent est {0}", temp4.Value);
+
+            Console.Error.WriteLine("Fringe " + a.fringe());
+
+            //foreach (var item in a.fringe())
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
+
+            Console.Error.WriteLine("est une feuille " + a.IsLeaf());
 
             //Tree a = new Tree();
             //Tree temp = new Tree(81);
@@ -116,6 +127,32 @@ namespace TestProject
             Console.Error.WriteLine("##############################################################");
 
             Console.Error.WriteLine(c.ToString());
+        }
+
+        [TestMethod]
+        public void UnitTestTreeRedBlack()
+        {
+            TreeRedBlack tree = new TreeRedBlack();
+            tree.Insert(5);
+            tree.Insert(3);
+            tree.Insert(7);
+            tree.Insert(1);
+            tree.Insert(9);
+            tree.Insert(-1);
+            tree.Insert(11);
+            tree.Insert(6);
+
+            Console.Error.WriteLine(tree.ToString());
+            //tree.DisplayTree();
+            //tree.Delete(-1);
+            //tree.DisplayTree();
+            //tree.Delete(9);
+            //tree.DisplayTree();
+            //tree.Delete(5);
+            //tree.ToString();
+            //tree.DisplayTree();
+
+            //Console.ReadLine();
         }
     }
 }

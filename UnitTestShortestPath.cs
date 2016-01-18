@@ -72,9 +72,11 @@ namespace TestProject
             newShortPath.Nodes = new List<Node>();
             newShortPath.Edges = new List<Edge>();
             newShortPath.PosNodeStart = 0;
+            newShortPath.MaxValue = 9999;
             for (int i = 1; i < 6; i++)
             {
                 Node a = new Node();
+                //a.Value = 0;
                 a.Value = i;
                 newShortPath.Nodes.Add(a);
             }
@@ -126,6 +128,7 @@ namespace TestProject
             newShortPath.Nodes = new List<Node>();
             newShortPath.Edges = new List<Edge>();
             newShortPath.PosNodeStart = 0;
+            newShortPath.MaxValue = 9999;
             for (int i = 1; i < 6; i++)
             {
                 Node a = new Node();
