@@ -14,7 +14,6 @@ namespace TestProject
         {
             var foundKeys = new Dictionary<int, List<Entry<int, int>>>();
             ValidateSubtree(tree, tree, degree, int.MinValue, int.MaxValue, foundKeys);
-
             Assert.AreEqual(0, expectedKeys.Except(foundKeys.Keys).Count());
             foreach (var keyValuePair in foundKeys)
             {

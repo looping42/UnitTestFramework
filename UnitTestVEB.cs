@@ -8,7 +8,7 @@ namespace TestProject
     public class UnitTestVEB
     {
         [TestMethod]
-        public void setUp()
+        public void testVeb()
         {
             VebTree test = new VebTree(16);
 
