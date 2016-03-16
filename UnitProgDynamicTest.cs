@@ -17,7 +17,7 @@ namespace TestProject
             int[] prix = { 1, 5, 8, 9, 10, 17, 17, 20 };
 
             int taille = prix.Length;
-
+            int taille2 = prix.Length;
             int result = DynamicProg.CutRod(prix, 5);
 
             //Console.WriteLine( result);
