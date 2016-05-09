@@ -1,0 +1,45 @@
+13:35:07 - Info        Classe
+13:35:07 - Info        C:\Program Files (x86)\IIS Express
+13:36:20 - Info        Classe
+13:36:20 - Info        C:\Program Files (x86)\IIS Express
+13:47:48 - Info        Classe
+13:48:04 - Info        C:\Program Files (x86)\IIS Express
+13:49:51 - Info        Classe
+13:50:01 - Info        C:\Program Files (x86)\IIS Express
+13:50:05 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:24:26 - Info        Classe
+14:24:32 - Info        C:\Program Files (x86)\IIS Express
+14:24:32 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:24:37 - Info        Classe
+14:24:42 - Info        C:\Program Files (x86)\IIS Express
+14:24:42 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:38:13 - Info        Classe
+14:38:13 - Info        C:\Program Files (x86)\IIS Express
+14:38:13 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:38:13 - Info        Classe
+14:38:13 - Info        C:\Program Files (x86)\IIS Express
+14:38:13 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:39:13 - Info        Classe
+14:39:13 - Info        Classe
+14:39:13 - Info        C:\Program Files (x86)\IIS Express
+14:39:13 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:39:13 - Info        C:\Program Files (x86)\IIS Express
+14:39:13 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:39:58 - Info        Classe
+14:39:58 - Info        Classe
+14:39:58 - Info        C:\Program Files (x86)\IIS Express
+14:39:58 - Info        C:\Program Files (x86)\IIS Express
+14:39:58 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:39:58 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:40:46 - Info        Classe
+14:40:46 - Info        Classe
+14:40:46 - Info        C:\Program Files (x86)\IIS Express
+14:40:46 - Info        C:\Program Files (x86)\IIS Express
+14:40:46 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:40:46 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:41:33 - Info        Classe
+14:41:33 - Info        Classe
+14:41:33 - Info        C:\Program Files (x86)\IIS Express
+14:41:33 - Info        C:\Program Files (x86)\IIS Express
+14:41:33 - Info        E:\projetvisualstudio\UnitTest\testweb\
+14:41:33 - Info        E:\projetvisualstudio\UnitTest\testweb\

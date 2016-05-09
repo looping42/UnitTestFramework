@@ -1,0 +1,16 @@
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Test.exe.config
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Test.exe
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Test.pdb
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Framework.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.Helpers.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.Mvc.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.Razor.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.WebPages.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\System.Web.WebPages.Razor.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\T4MVCExtensions.dll
+E:\projetvisualstudio\UnitTest\Test\bin\Debug\Framework.pdb
+E:\projetvisualstudio\UnitTest\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\projetvisualstudio\UnitTest\Test\obj\Debug\Test.exe
+E:\projetvisualstudio\UnitTest\Test\obj\Debug\Test.pdb
