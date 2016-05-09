@@ -17,8 +17,8 @@ namespace TestProject
             int[] prix = { 1, 5, 8, 9, 10, 17, 17, 20 };
 
             int taille = prix.Length;
-            int taille2 = prix.Length;
-            int result = DynamicProg.CutRod(prix, 5);
+
+            int result = DynamicProg.CutRod(5, prix);
 
             //Console.WriteLine( result);
             Assert.AreEqual(result.ToString(), "13");
@@ -31,7 +31,7 @@ namespace TestProject
 
             int taille = prix.Length;
 
-            int result = DynamicProg.CutRod(prix, 2);
+            int result = DynamicProg.CutRod(2, prix);
 
             Assert.AreEqual(result.ToString(), "5");
         }
@@ -101,6 +101,23 @@ namespace TestProject
             CollectionAssert.AreEqual(DynamicProg.SelectMaxActivities(s, f), reztest);
         }
 
+        //marche pas pourquoi
+        [TestMethod]
+        public void TestSelectMaxActivitiesV4()
+        {
+            int[] s = { 3, 9, 11, 16, 24 };
+            int[] f = { 7, 10, 16, 24, 28 };
+            List<int> result = DynamicProg.SelectMaxActivities(s, f);
+
+            for (int i = 0; i < result.Count; i++)
+            {
+                Console.Write(result[i] + ";");
+            }
+            Console.WriteLine("nombre" + result.Count);
+            int[] reztest = { 0, 1, 2, 3, 4 };
+            CollectionAssert.AreEqual(DynamicProg.SelectMaxActivities(s, f), reztest);
+        }
+
         [TestMethod]
         public void TestSelectMaxActivitiesRecursive()
         {
@@ -118,6 +135,7 @@ namespace TestProject
         public void TestHuffman()
         {
             string input = "abcdef";
+
             TreeHuffman huffmanTree = new TreeHuffman();
 
             // Build the Huffman tree
@@ -125,7 +143,6 @@ namespace TestProject
 
             // Encode
             BitArray encoded = huffmanTree.Encode(input);
-
             Console.Write("Encoded: ");
             foreach (bool bit in encoded)
             {
@@ -136,7 +153,7 @@ namespace TestProject
             // Decode
             string decoded = huffmanTree.Decode(encoded);
 
-            Console.WriteLine("Decoded: " + decoded);
+            Console.WriteLine("decoded: " + decoded);
         }
 
         [TestMethod]
